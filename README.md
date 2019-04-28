@@ -2,7 +2,8 @@
 
 This repo contains the projects for the Data Engineering Nanodegree program from [Udacity](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
 
-## Project 1 - [Data Modeling](https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/data_modeling_postgresql),(https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P1-1%20Data%20Modeling%20with%20Apache%20Cassandra)
+## Project 1 - [Data Modeling](https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P1%20data_modeling_postgresql),
+(https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P1-1%20Data%20Modeling%20with%20Apache%20Cassandra)
 
 Course 1: Data Modeling
 In this course, you’ll learn to create relational and NoSQL data models to fit the diverse
