@@ -1,66 +1,161 @@
-Data Modeling with PostgresSQL
-==========================================
-## Table of contents
-1.Goal
-2.Setup
-3.File Description
-4.Schema for Song Play Analysis
-5.Instructions
+# Overview
 
-## Goal
-A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
+This repo contains the projects for the Data Engineering Nanodegree program from [Udacity](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
 
-They'd like a data engineer to create a Postgres database with tables designed to optimize queries on song play analysis, and bring you on the project. Your role is to create a database schema and ETL pipeline for this analysis. You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.
+## Project 1 - [Data Modeling]
 
-In this project, you'll apply what you've learned on data modeling with Postgres and build an ETL pipeline using Python. To complete the project, you will need to define fact and dimension tables for a star schema for a particular analytic focus, and write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL.
+Course 1: Data Modeling
+In this course, you’ll learn to create relational and NoSQL data models to fit the diverse
+needs of data consumers. You’ll understand the differences between different data
+models, and how to choose the appropriate data model for a given situation. You’ll also
+build fluency in PostgreSQL and Apache Cassandra.
+Lesson Title Learning Outcomes
+Introduction to Data
+Modeling
+➔ Understand the purpose of data modeling
+➔ Identify the strengths and weaknesses of different types
+of databases and data storage techniques
+➔ Create a table in Postgres and Apache Cassandra
+Relational Data Models ➔ Understand when to use a relational database
+➔ Understand the difference between OLAP and OLTP
+databases
+➔ Create normalized data tables
+➔ Implement denormalized schemas (e.g. STAR, Snowflake)
+NoSQL Data Models ➔ Understand when to use NoSQL databases and how
+they differ from relational databases
+➔ Select the appropriate primary key and clustering
+columns for a given use case
+➔ Create a NoSQL database in Apache Cassandra
 
-## Setup
-In my case, I have run the steps below in own machine (ubuntu)
-For local install, perform the following steps before running the code:
+Project: Data Modeling with Postgres and Apache Cassandra
+In this project, you’ll model user activity data for a music streaming app called Sparkify.
+You’ll create a database and ETL pipeline, in both Postgres and Apache Cassandra,
+designed to optimize queries for understanding what songs users are listening to. For
+PostgreSQL you will also define Fact and Dimension tables and insert data into your new
+tables. For Apache Cassandra, you will model your data so you can run specific queries
+provided by the analytics team at Sparkify
 
-- Install PostgreSQL ($sudo apt update
-$sudo apt install postgresql postgresql-contrib).
-- Create "studentdb" (createdb 'studentdb').
-- Add "student" user with password "student" and grant createdb role.
-- Test login (psql -U student -d studentdb -W)
+In this Project, we will need to do the following:
 
-## File Description
+- Data Modeling with Postgres
 
-- create_tables.py: helper functions script for dropping and creating tables 
+* Design a Star schema database that is optimized for song play analysis using Postgres. The Fact table will be called songplays along with our Dimension tables: users, songs, artists, and time. This will enable the analytics team to quickly query the data for their analysis.
+* Build an ETL pipeline to parse the data from the JSON files (Songs and Logs). Here we will use Python and Pandas to parse and cleanup the data.
+* Finally, we will populate the database tables using Python and prepared statements.
 
-- sql_queries.py: helper functions to drop/create tables, insert/query tables.
+- Data Modeling with Apache Cassandra
 
-- etl.ipynb: jupyter notebook for building the initial ETL code.
-
-- etl.py: actual ETL code for working with the data.
-
-- test.ipynb: notebook for running test queries against the loaded database.
-
-- data: Song dateset->The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are filepaths to two files in this dataset. Log dataset ->The second dataset consists of log files in JSON format generated by this event simulator based on the songs in the dataset above. These simulate app activity logs from a music streaming app based on specified configurations.
-
-## Schema for Song Play Analysis
-
-
-Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
-
-Fact Table
-1.songplays - records in log data associated with song plays i.e. records with page NextSong
-songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
-Dimension Tables
-2.users - users in the app
-user_id, first_name, last_name, gender, level
-3.songs - songs in music database
-song_id, title, artist_id, year, duration
-4.artists - artists in music database
-artist_id, name, location, lattitude, longitude
-5.time - timestamps of records in songplays broken down into specific units
-start_time, hour, day, week, month, year, weekday
-
-## Instructions
+* Create a relational database using Apache Cassandra
+* Define Fact and Dimension tables
+* Build an ETL pipeline designed to optimize queries for understanding what songs users are listening to. 
+* Load the database
 
 
-- python create_tables.py: helper functions to drop any existing tables and create them
-- python etl.py: helper functions to load and process all the log files
-- jupyter notebook test.ipynb:  notebook which is checking the data is loaded properly in the database
 
-Remember to run create_tables.py before running the cell in the ETL pipeline to ensure you've created/resetted the time,songs, artist, users,and songplays table in the sparkify database.
+## Project 2 - [Cloud Data Warehouse]
+Course 2: Cloud Data Warehouses
+In this course, you’ll learn to create cloud-based data warehouses. You’ll sharpen your data
+warehousing skills, deepen your understanding of data infrastructure, and be introduced
+to data engineering on the cloud using Amazon Web Services (AWS).
+Lesson Title Learning Outcomes
+Introduction to the
+Data Warehouses
+➔ Understand Data Warehousing architecture
+➔ Run an ETL process to denormalize a database (3NF to Star)
+➔ Create an OLAP cube from facts and dimensions
+➔ Compare columnar vs. row oriented approaches
+Introduction to the
+Cloud with AWS
+➔ Understand cloud computing
+➔ Create an AWS account and understand their services
+➔ Set up Amazon S3, IAM, VPC, EC2, RDS PostgreSQL
+Implementing Data
+Warehouses on AWS
+➔ Identify components of the Redshift architecture
+➔ Run ETL process to extract data from S3 into Redshift
+➔ Set up AWS infrastructure using Infrastructure as Code (IaC)
+➔ Design an optimized table by selecting the appropriate
+distribution style and sorting key
+
+Project 2: Data Infrastructure on the Cloud
+In this project, you are tasked with building an ELT pipeline that extracts their data from S3,
+stages them in Redshift, and transforms data into a set of dimensional tables for their
+analytics team to continue finding insights in what songs their users are listening to
+
+
+## Project 3 - [Data Lakes with Spark]
+
+Course 3: Data Lakes with Spark
+In this course, you will learn more about the big data ecosystem and how to use Spark to
+work with massive datasets. You’ll also learn about how to store big data in a data lake and
+query it with Spark.
+Lesson Title Learning Outcomes
+The Power of Spark ➔ Understand the big data ecosystem
+➔ Understand when to use Spark and when not to use it
+Data Wrangling with
+Spark
+➔ Manipulate data with SparkSQL and Spark Dataframes
+➔ Use Spark for ETL purposes
+Debugging and
+Optimization
+➔ Troubleshoot common errors and optimize their code using
+the Spark WebUI
+Introduction to Data
+Lakes
+➔ Understand the purpose and evolution of data lakes
+➔ Implement data lakes on Amazon S3, EMR, Athena, and
+Amazon Glue
+➔ Use Spark to run ELT processes and analytics on data of
+diverse sources, structures, and vintages
+➔ Understand the components and issues of data lakes
+Project 3: Big Data with Spark
+In this project, you'll build an ETL pipeline for a data lake. The data resides in S3, in a
+directory of JSON logs on user activity on the app, as well as a directory with JSON metadata
+on the songs in the app. You will load data from S3, process the data into analytics tables
+using Spark, and load them back into S3. You'll deploy this Spark process on a cluster using
+AW
+
+
+## Project 4 - [Automate Data Pipelines]
+
+Course 4: Automate Data Pipelines
+In this course, you’ll learn to schedule, automate, and monitor data pipelines using Apache
+Airflow. You’ll learn to run data quality checks, track data lineage, and work with data
+pipelines in production.
+Lesson Title Learning Outcomes
+Data Pipelines ➔ Create data pipelines with Apache Airflow
+➔ Set up task dependencies
+➔ Create data connections using hooks
+Data Quality ➔ Track data lineage
+➔ Set up data pipeline schedules
+➔ Partition data to optimize pipelines
+➔ Write tests to ensure data quality
+➔ Backfill data
+Production Data
+Pipelines
+➔ Build reusable and maintainable pipelines
+➔ Build your own Apache Airflow plugins
+➔ Implement subDAGs
+➔ Set up task boundaries
+➔ Monitor data pipelines
+
+Project: Data Pipelines with Airflow
+In this project, you’ll continue your work on the music streaming company’s data
+infrastructure by creating and automating a set of data pipelines. You’ll configure and
+schedule data pipelines with Airflow and monitor and debug production pipelines.
+
+
+
+## Project 5 - [Data Engineering Nanodegree Capstone Project]
+
+Data Engineering Nanodegree Capstone Project
+The purpose of the data engineering capstone project is to give you a chance to combine
+what you've learned throughout the program. This project will be an important part of your
+portfolio that will help you achieve your data engineering-related career goals.
+In this project, you'll define the scope of the project and the data you'll be working with.
+We'll provide guidelines, suggestions, tips, and resources to help you be successful, but
+your project will be unique to you. You'll gather data from several different data sources;
+transform, combine, and summarize it; and create a clean database for others to analyze.
+
+## References:
+Project definitions - https://www.udacity.com/course/data-engineer-nanodegree--nd027
