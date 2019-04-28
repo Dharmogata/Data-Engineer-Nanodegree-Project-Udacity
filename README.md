@@ -89,6 +89,7 @@ analytics team to continue finding insights in what songs their users are listen
 
 
 ## Project 3 - [Data Lakes with Spark]
+(https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P3%20Data%20Lake%20with%20Spark)
 
 Course 3: Data Lakes with Spark
 In this course, you will learn more about the big data ecosystem and how to use Spark to
@@ -122,6 +123,7 @@ AW
 
 
 ## Project 4 - [Automate Data Pipelines]
+(https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P4%20Data%20Pipelines%20with%20Apache%20Airflow)
 
 Course 4: Automate Data Pipelines
 In this course, you’ll learn to schedule, automate, and monitor data pipelines using Apache
@@ -152,6 +154,7 @@ schedule data pipelines with Airflow and monitor and debug production pipelines.
 
 
 ## Project 5 - [Data Engineering Nanodegree Capstone Project]
+(https://github.com/gwanseum/Data-Engineer-Nanodegree-Project-Udacity/tree/master/P5%20Data%20Engineering%20Nanodegree%20Capstone%20Project)
 
 Data Engineering Nanodegree Capstone Project
 The purpose of the data engineering capstone project is to give you a chance to combine
