@@ -90,9 +90,11 @@ start_time, hour, day, week, month, year, weekday
 *Staging Table
 
 staging songs
+
 num_songs, artist_latitude, artist_longitude, artist_location, artist_name, song_id, title, duration, year
 
 staging event
+
 artist,auth,firstName,gender,itemInSession,lastName,length,level,location,method,page,registeration,sessionId,song,status,ts,userAgent,userId  
 
 
