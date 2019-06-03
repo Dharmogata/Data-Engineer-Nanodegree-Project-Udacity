@@ -1,4 +1,4 @@
-Cloud Data Warehouses-redshift
+Data Pipelines with Apache Airflow
 ==========================================
 ## Table of contents
 
