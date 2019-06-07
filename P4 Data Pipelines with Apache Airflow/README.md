@@ -41,7 +41,7 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 
  Dag Iterative Results Sample 
 
-![example](./Dag Iterative Results Sample.png)
+![example](./Dag Iterative Results Sample .png)
 
 
 ## Project Datasets
