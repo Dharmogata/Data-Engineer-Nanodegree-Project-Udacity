@@ -40,20 +40,7 @@ Dag Flow
 Dag Iterative Results Sample
 ![Tree Chart](Dag_sample.png)
 
-- Results sample
 
- Dag Flow
-
-![example](./Dag.png)
-
-
-
-
-
-
- Dag Iterative Results Sample 
-
-![example](./Dag.png)
 
 
 
