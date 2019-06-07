@@ -44,6 +44,10 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 
 ![example](./Dag2 .png)
 
+![example](./Dag.png)
+
+![example](./Dag2 .png)
+
 
 
 ## Project Datasets
