@@ -33,6 +33,13 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 
 
 
+Dag Flow
+![DAG Chart](Dag.png)
+
+
+Dag Iterative Results Sample
+![Tree Chart](Dag2.png)
+
 - Results sample
 
  Dag Flow
