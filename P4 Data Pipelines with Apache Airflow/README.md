@@ -38,7 +38,7 @@ Dag Flow
 
 
 Dag Iterative Results Sample
-![Tree Chart](Dag_sample.png)
+![Tree Chart](Dag_Sample.png)
 
 
 
