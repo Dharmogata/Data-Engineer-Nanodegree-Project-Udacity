@@ -5,6 +5,7 @@ Data Pipelines with Apache Airflow
 
 1.Goal
 
+1-1 results sample
 
 
 2.Project Datasets
@@ -31,7 +32,16 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 * Setting up IAM Roles, Redshift Clusters, Airflow Connections.
 
 
+- Results sample
 
+ Dag Flow
+
+![example](./Dag.png)
+
+
+ Dag Iterative Results Sample 
+
+![example](./Dag Iterative Results Sample .png)
 
 
 ## Project Datasets
