@@ -32,6 +32,7 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 * Setting up IAM Roles, Redshift Clusters, Airflow Connections.
 
 
+
 - Results sample
 
  Dag Flow
@@ -41,7 +42,7 @@ As their data engineer, I was responsible for automating the ETL pipelines throu
 
  Dag Iterative Results Sample 
 
-![example](./Dag Iterative Results Sample .png)
+![example](./Dag2.png)
 
 
 ## Project Datasets
